@@ -1,20 +1,18 @@
 <html>
 <body>
-    <div>
+    <!--<div>
         <form method="post">
             <input type="text" name="text" size="50" placeholder="Запишите свой рецепт...">
             <br>
             <button type="submit">Сохранить рецепт</button>
         </form>
-    </div>
+    </div> -->
     <div>Список рецептов</div>
         {{#recipes}}
             <div>
                 <b>{{id}}</b>
                 <b>{{text}}</b>
-                <b>{{date}}</b>
-                <b>{{perentId}}</b>
-                <b>{{childId}}</b>
+                <b>{{dateCeation}}</b>
             </div>
         {{/recipes}}
 </body>

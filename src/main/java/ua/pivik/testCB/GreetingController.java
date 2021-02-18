@@ -24,8 +24,14 @@ public class GreetingController {
     @GetMapping
     public String main(Map<String, Object> model) {
         Iterable<Recipe> recipes = recipeRepo.findAll();
-
-        model.put("recipe", recipes);
+        for (Recipe rec: recipes) {
+            System.out.println(rec.getId() + " : " +
+                    rec.getText() + " : " +
+                    rec.getDateCeation() + " : " +
+                    rec.getParentId() + " : " +
+                    rec.getChildId());
+        }
+        model.put("recipes", recipes);
         return "main";
     }
 
@@ -35,7 +41,7 @@ public class GreetingController {
         recipeRepo.save(recipe);
 
         Iterable<Recipe> recipes = recipeRepo.findAll();
-        model.put("recipe", recipes);
+        model.put("recipes", recipes);
         return "main";
     }
 }
