@@ -2,7 +2,8 @@
 <body>
     <div>
         <form method="post">
-            <input type="text" name="text" placeholder="Запишите свой рецепт...">
+            <input type="text" name="text" size="256" placeholder="Запишите свой рецепт...">
+            <br>
             <button type="submit">Сохранить рецепт</button>
         </form>
     </div>
@@ -10,6 +11,8 @@
         {{#Recipe}}
             <b>{{id}}</b>
             <b>{{text}}</b>
+            <b>{{date}}</b>
+            <b>{{perentId}}</b>
             <b>{{childId}}</b>
         {{/Recipe}}
 </body>
