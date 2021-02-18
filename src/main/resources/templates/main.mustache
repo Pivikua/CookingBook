@@ -1,5 +1,16 @@
 <html>
 <body>
-<div>{{some}}</div>
+    <div>
+        <form method="post">
+            <input type="text" name="text" placeholder="Запишите свой рецепт...">
+            <button type="submit">Сохранить рецепт</button>
+        </form>
+    </div>
+    <div>Список рецептов</div>
+        {{#Recipe}}
+            <b>{{id}}</b>
+            <b>{{text}}</b>
+            <b>{{childId}}</b>
+        {{/Recipe}}
 </body>
 </html>
