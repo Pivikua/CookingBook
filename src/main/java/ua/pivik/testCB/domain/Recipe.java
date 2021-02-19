@@ -12,9 +12,9 @@ public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name= "text")
+    @Column(name= "name")
     private String name;
-    @Column(name= "text", length = 1024)
+    @Column(name= "text", length = 2048)
     private String text;
     private Date dateCeation;
     private Long parentId;
