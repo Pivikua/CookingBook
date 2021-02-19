@@ -3,6 +3,7 @@ package ua.pivik.testCB;
 /**
  * @autor Alexander Pivovarov
  */
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,8 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ua.pivik.testCB.domain.Recipe;
 import ua.pivik.testCB.repos.RecipeRepo;
 
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 public class GreetingController {
@@ -24,24 +24,28 @@ public class GreetingController {
     @GetMapping
     public String main(Map<String, Object> model) {
         Iterable<Recipe> recipes = recipeRepo.findAll();
-        for (Recipe rec: recipes) {
-            System.out.println(rec.getId() + " : " +
-                    rec.getText() + " : " +
-                    rec.getDateCeation() + " : " +
-                    rec.getParentId() + " : " +
-                    rec.getChildId());
-        }
         model.put("recipes", recipes);
         return "main";
     }
 
     @PostMapping
-    public String add(@RequestParam String text, Map<String, Object> model) {
-        Recipe recipe = new Recipe(text, new Date(), null, null);
+    public String add(@RequestParam String name,
+                      @RequestParam String text,
+                      Map<String, Object> model) {
+        Recipe recipe = new Recipe(name, text, new Date(), null, null);
         recipeRepo.save(recipe);
 
         Iterable<Recipe> recipes = recipeRepo.findAll();
         model.put("recipes", recipes);
+        return "main";
+    }
+
+    @PostMapping("filter")
+    public String filter(@RequestParam String filter, Map<String, Object> model) {
+
+        List<Recipe> recipes = recipeRepo.findByTextContaining(filter);
+        model.put("recipes", recipes);
+
         return "main";
     }
 }

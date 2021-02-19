@@ -12,6 +12,7 @@ public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String name;
     private String text;
     private Date dateCeation;
     private Long parentId;
@@ -20,7 +21,8 @@ public class Recipe {
     public Recipe() {
     }
 
-    public Recipe(String text, Date dateCeation, Long parentId, Long childId) {
+    public Recipe(String name, String text, Date dateCeation, Long parentId, Long childId) {
+        this.name = name;
         this.text = text;
         this.dateCeation = dateCeation;
         this.parentId = parentId;
@@ -33,6 +35,14 @@ public class Recipe {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getText() {

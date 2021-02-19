@@ -1,16 +1,21 @@
 <html>
 <body>
-    <!--<div>
+    <div>
         <form method="post">
             <input type="text" name="text" size="50" placeholder="Запишите свой рецепт...">
             <br>
             <button type="submit">Сохранить рецепт</button>
         </form>
-    </div> -->
+    </div>
     <div>Список рецептов</div>
+    <form method="post" action="filter">
+        <input type="text" name="filter">
+        <button type="submit">Найти</button>
+    </form>
         {{#recipes}}
             <div>
                 <b>{{id}}</b>
+                <b>{{name}}</b>
                 <b>{{text}}</b>
                 <b>{{dateCeation}}</b>
             </div>
