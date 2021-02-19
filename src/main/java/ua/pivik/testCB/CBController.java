@@ -16,7 +16,7 @@ import ua.pivik.testCB.repos.RecipeRepo;
 import java.util.*;
 
 @Controller
-public class GreetingController {
+public class CBController {
 
     @Autowired
     private RecipeRepo recipeRepo;
