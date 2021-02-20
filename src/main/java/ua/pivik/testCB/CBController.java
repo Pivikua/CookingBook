@@ -44,7 +44,7 @@ public class CBController {
         if (name != null && !name.isEmpty() && text != null && !text.isEmpty()) {
             Recipe recipe = new Recipe(name, text, new Date(), null, null);
             recipeRepo.save(recipe);
-            return "/";
+            return "main";
         }
 
         Iterable<Recipe> recipes = recipeRepo.findAll();
