@@ -44,12 +44,14 @@ public class CBController {
         if (name != null && !name.isEmpty() && text != null && !text.isEmpty()) {
             Recipe recipe = new Recipe(name, text, new Date(), null, null);
             recipeRepo.save(recipe);
+            return "redirect:/";
         }
 
         Iterable<Recipe> recipes = recipeRepo.findAll();
         ((List<Recipe>) recipes).sort(comparator);
         model.put("recipes", recipes);
-        return "redirect:/";
+        model.put("qtty", ((List<Recipe>) recipes).size());
+        return "newrecipe";
     }
 
     @PostMapping("filter")
@@ -62,6 +64,7 @@ public class CBController {
         }
         ((List<Recipe>) recipes).sort(comparator);
         model.put("recipes", recipes);
+        model.put("qtty", ((List<Recipe>) recipes).size());
         return "main";
     }
 
