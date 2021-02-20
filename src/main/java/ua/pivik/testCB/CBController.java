@@ -15,8 +15,11 @@ import ua.pivik.testCB.repos.RecipeRepo;
 
 import java.util.*;
 
+import static java.util.Comparator.comparing;
+
 @Controller
 public class CBController {
+    final Comparator<Recipe>comparator = comparing(Recipe::getName);
 
     @Autowired
     private RecipeRepo recipeRepo;
@@ -24,20 +27,29 @@ public class CBController {
     @GetMapping("/")
     public String main(Map<String, Object> model) {
         Iterable<Recipe> recipes = recipeRepo.findAll();
+        ((List<Recipe>) recipes).sort(comparator);
         model.put("recipes", recipes);
         return "main";
     }
 
-    @PostMapping("/main")
-    public String add(@RequestParam() String name,
-                      @RequestParam String text,
-                      Map<String, Object> model) {
-        Recipe recipe = new Recipe(name, text, new Date(), null, null);
-        recipeRepo.save(recipe);
+    @GetMapping("newrecipe")
+    public String newr() {
+        return "newrecipe";
+    }
+
+    @PostMapping("newrecipe")
+    public String add(@RequestParam(required = true) String name,
+                            @RequestParam(required = true) String text,
+                            Map<String, Object> model) {
+        if (name != null && !name.isEmpty() && text != null && !text.isEmpty()) {
+            Recipe recipe = new Recipe(name, text, new Date(), null, null);
+            recipeRepo.save(recipe);
+        }
 
         Iterable<Recipe> recipes = recipeRepo.findAll();
+        ((List<Recipe>) recipes).sort(comparator);
         model.put("recipes", recipes);
-        return "main";
+        return "redirect:/";
     }
 
     @PostMapping("filter")
@@ -48,7 +60,10 @@ public class CBController {
         } else {
             recipes = recipeRepo.findAll();
         }
+        ((List<Recipe>) recipes).sort(comparator);
         model.put("recipes", recipes);
         return "main";
     }
+
+
 }

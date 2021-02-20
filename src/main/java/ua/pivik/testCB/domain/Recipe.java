@@ -1,6 +1,7 @@
 package ua.pivik.testCB.domain;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.Date;
 
 /**
@@ -13,8 +14,10 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name= "name")
+    @NotEmpty(message = "Не может быть пустым")
     private String name;
     @Column(name= "text", length = 2048)
+    @NotEmpty(message = "Не может быть пустым")
     private String text;
     private Date dateCeation;
     private Long parentId;

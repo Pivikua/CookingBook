@@ -1,0 +1,15 @@
+Перенести функционал создания нового рецепта на старницу newRecipe
+На глвную страницу добавить кнопку {{Добавить новый рецепт}}
+К каждому рецепту добавить кнопки -->
+	{{Редактировать}}
+	{{Добавить наследуемый}}
+	{{Посмотреть несдеников}}
+	{{Удалить ветку рецептов}}
+Создать станицу -->  Редактировать
+Сделать красиво
+
+
+spring.datasource.url=jdbc:postgresql://ec2-54-237-143-127.compute-1.amazonaws.com:5432/dda7juoiecr60
+spring.datasource.username=bjwcpaucfypnhp
+spring.datasource.password=d66423469bd7738d36ef5670f3f150aebb1528525a53342b2451ce124408331b
+spring.jpa.generate-ddl=true

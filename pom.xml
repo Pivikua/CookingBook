@@ -36,6 +36,11 @@
             <optional>true</optional>
         </dependency>
 
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+
         <!-- BD - jpa, postgreSQL -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
