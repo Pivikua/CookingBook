@@ -50,7 +50,7 @@ public class CBController {
         Iterable<Recipe> recipes = recipeRepo.findAll();
         ((List<Recipe>) recipes).sort(comparator);
         model.put("recipes", recipes);
-        model.put("qtty", ((List<Recipe>) recipes).size());
+        /*model.put("qtty", ((List<Recipe>) recipes).size());*/
         return "newrecipe";
     }
 
@@ -64,7 +64,7 @@ public class CBController {
         }
         ((List<Recipe>) recipes).sort(comparator);
         model.put("recipes", recipes);
-        model.put("qtty", ((List<Recipe>) recipes).size());
+        //model.put("qtty", ((List<Recipe>) recipes).size());
         return "main";
     }
 
