@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f3e3de2-deac-48a0-a30f-725fefbbb0ab" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/pivik/testCB/CBController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/pivik/testCB/CBController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/pivik/testCB/CBController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ua/pivik/testCB/CBController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CBController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CBController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/pivik/testCB/CBController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="66" column="59" lean-forward="true" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+            <state relative-caret-position="431">
+              <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1033#1034#0" expanded="true" />
@@ -105,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.mustache" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.mustache" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.mustache">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
@@ -139,8 +136,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ua/pivik/testCB/domain/Recipe.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/newrecipe.mustache" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/pivik/testCB/CBController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/main.mustache" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/pivik/testCB/CBController.java" />
       </list>
     </option>
   </component>
@@ -347,16 +344,15 @@
       <updated>1613674001102</updated>
       <workItem from="1613674004932" duration="14843000" />
       <workItem from="1613715707015" duration="18341000" />
-      <workItem from="1613810957489" duration="15473000" />
+      <workItem from="1613810957489" duration="15765000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48657000" />
+    <option name="totallyTimeSpent" value="48949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1288" y="-261" width="1296" height="1040" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -380,8 +376,8 @@
       <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="bottom" id="Run" order="10" weight="0.35476717" />
       <window_info anchor="bottom" id="Spring" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32705098" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.18527508" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32705098" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.18527508" />
       <window_info anchor="right" id="Bean Validation" order="0" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="6" />
@@ -638,18 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/pivik/testCB/CBController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="66" column="59" lean-forward="true" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-            <element signature="e#1067#1068#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/newrecipe.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -661,6 +645,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/pivik/testCB/CBController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
