@@ -10,4 +10,6 @@ import java.util.List;
  */
 public interface RecipeRepo extends CrudRepository<Recipe, Long> {
     List<Recipe> findByNameContaining(String name);
+    List<Recipe> findByParentId(Long id);
+    List<Recipe> findAllByParentId(Long id);
 }
